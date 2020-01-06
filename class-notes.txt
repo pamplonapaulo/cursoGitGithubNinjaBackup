@@ -59,16 +59,15 @@ Section 1.4:
         git diff: working dir VS. staged
         git diff --staged: staged vs. repository (or same as changes not committed)
 
-
-
-
-
-
-
-
-
-
 Section 1.5:
+
+    Using Git's Time Machine
+
+    
+
+
+
+
 Section 1.6:
 
 
