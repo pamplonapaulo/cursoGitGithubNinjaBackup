@@ -57,7 +57,7 @@ Section 1.4:
     git diff X git diff --staged
 
         git diff: working dir VS. staged
-        git diff --staged: staged vs. repository
+        git diff --staged: staged vs. repository (or same as changes not committed)
 
 
 
