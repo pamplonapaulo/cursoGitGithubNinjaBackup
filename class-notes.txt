@@ -61,14 +61,23 @@ Section 1.4:
 
 Section 1.5:
 
-    Using Git's Time Machine
+    git diff <file name> - so you get a single file's changes:
+        git diff index.html
+        git diff style.css
 
-    
+    git log --name-status (it shows also which files has changes per commit)
 
+    git diff <commit 1 commit2> (it shows differences between specifics commits)
+    (actually the first 7 chars from the hash are enough)
 
+    git diff dc624ab 6a51c9d (example)
 
+    IMPORTANT NOTE:
+    Do not take too long to commit between your changes, do it every single break point on project's history. This is how you will be able to come back in time, when needed.
 
 Section 1.6:
+
+    
 
 
 Section 2.1:
