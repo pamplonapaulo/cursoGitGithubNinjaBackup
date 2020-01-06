@@ -49,9 +49,15 @@ Section 1.3:
 Section 1.4:
 
     You may add more than one file at once, like this:
+        git add index.html style.css class-notes.txt
 
-    git add index.hetml style.css class-notes.txt
+    Or add all files at once:
+        git add .
 
+    git diff X git diff --staged
+
+        git diff: working dir VS. staged
+        git diff --staged: staged vs. repository
 
 
 
