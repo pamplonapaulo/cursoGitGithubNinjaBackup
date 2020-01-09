@@ -77,10 +77,42 @@ Section 1.5:
 
 Section 1.6:
 
+    For removed files. How to remove from git directory and tree?
+    In case the file style.css has been removed.
+    
+    What to do? Type it:
+    git rm style.css
+
+    Then commit it:
+    git commit -m "removed style.css"
+
+    Then if you type "git log --name-status", files now include another status: 'D', which means deleted. (We saw before 'M' for modified and 'A' for added.)
+
+    If you run a git diff with an old commit, such as 'git diff dc624abd7cd4f6279e080bf2247e54b8c65d0a61', it might show you stuff from the deleted file, headed by a quote like "deleted file mode 100644".
+
+Section 2.1:
+
+    Repositório para dúvidas dos alunos:
+    https://github.com/da2k/curso-git-e-github-ninja/issues
+
+    Another Bash command:
+    ls -l
+    (The -l switch turns on long listing format)
+    Learn more: https://www.garron.me/en/go2linux/ls-file-permissions.html
+
     
 
 
-Section 2.1:
+
+
+
+
+
+
+
+
+
+
 Section 2.2:
 Section 2.3:
 Section 2.4:
