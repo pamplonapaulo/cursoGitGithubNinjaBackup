@@ -233,7 +233,11 @@ Section 2.4:
 
             echo "node_modules" >> ~/.gitignore
 
-        
+Section 2.5: commit without parameters
+
+    If you run a commit without '-m' and any message, it opens an editor such as Vim.
+
+    Then you will be able to include not only a title, but a body message.
 
 
 
@@ -244,9 +248,6 @@ Section 2.4:
 
 
 
-
-
-Section 2.5:
 Section 2.6:
 
 Section 3.1:
