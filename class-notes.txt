@@ -332,6 +332,19 @@ Section 3.1: Branches
 
     Then it shows you a '*' beside the branch where you are. 
 
+    OBS: Git does not commit empty directories
+
+    Once you start to make new changes under a specific branch, you will realize that those changes won't be considered at the master branch or any other existent branch. Each branch has it's own complete environment.
+
+Section 3.2: MERGE
+
+    How to take one's branch's changes to the master branch?
+
+    Under master's branch, run:
+
+        git merge <branch's name>
+
+    Done. Now master just got all chanegs from the other branch.
 
 
 
@@ -343,15 +356,6 @@ Section 3.1: Branches
 
 
 
-
-
-
-
-
-
-
-
-Section 3.2:
 Section 3.3:
 Section 3.4:
 Section 3.5:
