@@ -346,17 +346,40 @@ Section 3.2: MERGE
 
     Done. Now master just got all chanegs from the other branch.
 
+    Be aware: by creating a branch you inherit it's current files at that time.
 
+    Every branch can build another sub branch.
 
+    Standars Best Practices?
 
+        'master'
+        master branch have to be the final and stable version, the more updated one. Never a test environment
 
+        'dev'
+        Use a 'dev' branch. Work from there, like a 'beta' version. The master development's version.
 
-
-
-
-
+        features
+        Have specific branches for specific features, like: 'js', 'css', 'js-default', 'style-css', etc.
 
 Section 3.3:
+
+
+    How to create and move to a new branch at once?
+
+        git checkout -b <name of the new branch>
+
+    How to rename a branch?
+
+        - Get inside the branch. Then:
+
+        git branch -m <new name>
+
+    
+
+
+
+
+
 Section 3.4:
 Section 3.5:
 Section 3.6:
