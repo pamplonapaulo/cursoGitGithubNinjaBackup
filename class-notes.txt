@@ -86,10 +86,12 @@ Section 1.6:
     In case the file style.css has been removed.
     
     What to do? Type it:
-    git rm style.css
+
+        git rm style.css
 
     Then commit it:
-    git commit -m "removed style.css"
+
+        git commit -m "removed style.css"
 
     Then if you type "git log --name-status", files now include another status: 'D', which means deleted. (We saw before 'M' for modified and 'A' for added.)
 
@@ -101,9 +103,11 @@ Section 2.1:
     https://github.com/da2k/curso-git-e-github-ninja/issues
 
     Another Bash command:
+
         ls -l
-        (The -l switch turns on long listing format)
-        Learn more: https://www.garron.me/en/go2linux/ls-file-permissions.html
+
+    (The -l switch turns on long listing format)
+    Learn more: https://www.garron.me/en/go2linux/ls-file-permissions.html
 
     Short review:
         if you create a file, then git it with 'add' : git add 'file name'
@@ -115,9 +119,11 @@ Section 2.1:
         But there are another way to make everything at once:
 
             git add --all
-            That works for NEW files, MODIFIED files and, also, for DELETED files.
 
-            The same command, in short, is:
+        That works for NEW files, MODIFIED files and, also, for DELETED files.
+
+        The same command, in short, is:
+        
             git add -A
 
     * * *
@@ -239,6 +245,92 @@ Section 2.5: commit without parameters
 
     Then you will be able to include not only a title, but a body message.
 
+        git commit
+
+    To escape from Vim after typer your message, press 'Esc' key, then type ':wq' and hit 'Enter' key. (Yup. Vim sucks.)
+
+    Can we use another text editor insted of Vim? Yes, we can. Under the Config settings there is this line:
+
+        core.editor=vim
+
+        Btw, just a recap => to show your settings, type:
+
+            git config --list
+
+    In order to change the editor vim to another one, such as VS Code, run this:
+    
+        git config --global core.editor atom (to change it for atom)
+
+    But a saver way to get it working would be:
+
+        git config --global -e (that opens the settings and you edit all you need)
+    
+    Then underneath the [core] area, you gonna include or edit:
+
+        editor = code --wait (here we want VS Code)
+
+Section 2.6: LOGS features
+
+    git log --name-status
+
+        It shows you the status of the files: M (modified), D (deleted), A (added)
+
+    git log --pretty=oneline
+
+        Shows less stuff to you in just one line.
+
+    git log --abbrev-commit
+
+        that show you the commit tokens in short
+
+    You also may mix some of these features, like that:
+
+        git log --pretty=oneline --abbrev-commit
+
+    Get some statistics - very cool:
+
+        git log --stat
+
+    What did you change? (That looks like git diff)
+
+        git log -p
+
+    How many commits you want to see?
+
+        git log -p -3 (just the 3 last commits)
+
+Section 3.1: Branches
+
+    Branches are ramifications.
+
+    Basic command:
+
+        git branch
+
+    By default, it shows you just the 'master' branch.
+
+    Usually you won't change anything inside the 'master' branch.
+    So you create other environments to make your changes without impact the 'master' branch until you make sure you want to update it.
+
+    Hot to create a branch?
+
+        git branch <new branch name>
+
+    At it's creation, the new branch starts with the same history of files that the 'master' has.
+
+    And then each new change at one branch doesn't impact other branches.
+
+    How to switch to another exist branch?
+
+        git checkout <existent branch name>
+
+    Done. Now you are not at the 'master' branch anymore, but in the one you created.
+
+    How to check in wich branch you are? Some terminals may show you already in the prompt. But if not your case, run:
+
+        git branch
+
+    Then it shows you a '*' beside the branch where you are. 
 
 
 
@@ -248,9 +340,17 @@ Section 2.5: commit without parameters
 
 
 
-Section 2.6:
 
-Section 3.1:
+
+
+
+
+
+
+
+
+
+
 Section 3.2:
 Section 3.3:
 Section 3.4:
