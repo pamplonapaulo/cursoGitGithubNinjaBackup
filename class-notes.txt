@@ -374,7 +374,12 @@ Section 3.3:
 
         git branch -m <new name>
 
-    
+    How to remove a branch?
+    In case sub branches have stuff already sent to their up levels, if your 'dev' branch has everything the others have, you should remove them.
+
+        git branch -D <branch's name>
+
+
 
 
 
