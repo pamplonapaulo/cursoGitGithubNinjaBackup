@@ -939,6 +939,8 @@ Section 7.4: Tables, Monospace Text
         ?>
         ```
 
+        https://github.com/pamplonapaulo/cursoGitGithubNinjaBackup/blob/master/MARKDOWN.MD
+
 Section 7.5: Task Lists, References, Lines
 
     - [ ] This is a checkbox 1
@@ -965,17 +967,170 @@ Section 7.5: Task Lists, References, Lines
 
 Section 7.6: Attachments, README.md, Gist
 
-https://gist.github.com/
+    https://gist.github.com/
 
-https://jobs.github.com/positions?location=Europe
+    https://jobs.github.com/positions?location=Europe
+
+Section 8.1: Workflow With Github: Intro + Fork
+
+Section 8.2:
+
+    In a team work, every user should:
+
+        Make sure your repo has a user.name and user.email;
+
+        Make sure your repo is set to the correct URL origin;
+
+        At first, each one will have their own remote origin. So how to keep everything updated?
+
+        Each worker have to include their partners remote's repos:
+
+            git remote add upstream <repo url>
+
+        Then, if you check your remotes...
+
+            git remote -v
+
+        You should have 2 repos: the regular 'origin' and the new one 'upstream'.
+
+        GIT FETCH (it's like PULL + MERGE)
+
+        So now by running 'git fetch' + <partner's repo> you gonna get on your machine everything that the co-worker has updated.
+
+            git fetch upstream
+
+        Git then creates to you a new branch 'master' pointted to the 'upstream/master' repo.
+
+        Now, finally, to get your own repo uptated, you will run a merge in your master's branch, taking the stuff from 'upstream/master'.
+
+            git merge upstream/master
+
+        Done. Now both repos should be equals.
+
+        
+            'git merge upstream/master' is almost the same as 'git pull upstream master'
 
 
+        'git fetch origin' checks if github has any update that you don't have.
+
+Section 8.3:
+
+    In case one worker creates a branch 'dev' and upload this to github, then his co-worker tries to update his own machine by running:
+    
+        (master): git fetch upstream
+
+    ...so git will let he know about the new existent branch:
+
+        * [new branch]          dev -> upstream/dev
+
+    If he runs a 'git branch', his machine still has just the 'master'.
+
+    But if he try to access this branch by running checkout:
+
+        (master): git checkout upstream/dev -b dev
+
+    The branch will be created based on this upstream/dev.
+
+    After this, both workers will have the branch 'dev'.
+
+    But in a good workflow, no one will commit under the branch 'dev'. And no one will create another branch from branch 'master' - only from 'dev'.
+
+    So the good practice is a worker creates a new branch 'content' from the branch 'dev' and run his commits under this new one.
+
+    When it's done, he will PUSH it to github:
+
+        (content): git push origin content
+
+    Then, at the GitHub website, you can 'open a pull request' to make the merge with this new 'content'. But never make this from 'content' to 'master', make to 'dev'.
+
+    Make sure you comment and explain what changes are being included.
+
+    Then someone will review those changes and let you know if it's ok.
+
+    If so, you can click on 'merge pull request'. After that, you can delete the 'content' branch cuz it's updates are already absorbed - now it's useless.
+
+
+    Ok. Now how about the other worker's files? It has to be updated. How?
+
+    She should run this:
+
+        (dev): git fetch upstream
+
+        (dev): git merge upstream/dev
+
+    Done.
+
+    In the other hand, the guy still have to update his local machine, which still has the old 'dev'.
+
+        (content): git checkout dev
+
+        (dev): git fetch origin
+
+        (dev): git merge origin/dev
+
+Section 8.4:
+
+    FERNANDO creates another feature under the css:
+
+        (dev): git checkout -b css
+
+    Checks if everythign is updated:
+
+        (css): git fetch origin
+
+    If so, then he can change the CSS.
+
+    So now he pushes branch 'css' to github:
+
+        (css): git push origin css
+
+    Now ANA is working on the project.
+
+    Under a branch named 'js', she includes a main.js file.
+
+    Before run a git PUSH, she checks if there are any update to include, by running:
+
+        (js): git fetch upstream
+
+    So now ANA discovers that there are a new branch called 'css', created by FERNANDO.
+
+    However, she doesn't need this. Also, if the change still only in that 'css' branch, not 'dev' branch, that means this change is not done.
+
+    So ANA will skip this and keep her job.
+
+        (js): git push origin js
+
+    So on the github website, ANA click on 'compare/pull request'.
+
+    Also, take a look at 'compare across forks'. It helps to understand the differences when each work is doing a pull request. FERNANDO, the guy who actually kinda 'owns' the original repo, sees the 'base' of comparision on his own repo. But ANA is using his repo when she sends a pull request.
+
+    Now FERNANDO is back to his tasks and will restart to work. QUestion: is his branch up to date? He have to check.
+
+        (css): git fetch origin
+
+    The git says no, it's not. He must update it.
+
+        (css): git merge origin/dev
+
+    Now he could commit his own changes on the css.
+
+        (css): git add .
+        (css): git commit -m "changes on css"
+
+    That done, he can push it to github:
+
+        (css): git push origin css
+
+    Good. Now on the website, he will click on 'compare & pull request'.
+
+    In case he sees not only his changes but someone else too, probably he is using a wrong branch: make sure he will update 'dev's branch, not the 'master'.
 
     
 
 
 
 
+        
 
 
 
@@ -986,9 +1141,33 @@ https://jobs.github.com/positions?location=Europe
 
 
 
-Section 8.1:
-Section 8.2:
-Section 8.3:
-Section 8.4:
+
+
+
+
 Section 8.5:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Section 8.6:
+
+
+
+
+
+
+
+
+
+
