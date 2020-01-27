@@ -526,7 +526,6 @@ Section 4.2: Automerge - solving conflicts
 
         The issue happens only when you and your coworker change close lines. If not, automerge will run nicely.
     
-
 Section 4.3: Merge Tool
 
     Now how about many complex conflicts? Use "merge tool".
@@ -554,8 +553,6 @@ Section 4.3: Merge Tool
     git checkout used to undo changes:
 
         git checkout <file with changes to undo>   
-
-
 
 Section 4.4:
 
@@ -589,8 +586,6 @@ Section 4.4:
         You may also move back in time and create a new branch at once:
 
             ex: git checkout 7c5e6a9 -b back-in-time-branch
-
-
 
 Section 4.5: git stash
 
@@ -628,7 +623,6 @@ Section 4.5: git stash
 
         git stash pop
 
-
 Section 4.6: Custom Logs
 
     git log --pretty=format
@@ -651,7 +645,6 @@ Section 4.6: Custom Logs
             %ce =   Comitter email
             %cd =   Comitter date
             %cr =   Comitter date, relative (relative is like 'two hours ago')
-
 
 Section 5.1: GitHub
 
@@ -722,8 +715,6 @@ Section 5.5: Branches inside GitHub
 
             git pull origin master
 
-
-
 Section 5.6: Removing branches
 
 
@@ -752,9 +743,6 @@ Section 5.6: Removing branches
                 git push origin :<branch>
                 ex: git push origin :dev
 
-
-
-
 Section 6.1: cache de senha
 
     Global Config: getting yoru password on cache.
@@ -777,14 +765,56 @@ Section 6.1: cache de senha
 
     That way, your credentials will expire in 3600 seconds (one hour)
 
+Section 6.2: overview do repositório no github
 
-Section 6.2: overview do repositório
-Section 6.3: configuração do repositório
+Section 6.3: configuração do repositório no github
+
+
+
+    Adding new colaborators:
+
+        https://github.com/pamplonapaulo/<repository name>/settings/access
+
+    
+    Branch protection rules
+
+    https://github.com/pamplonapaulo/cursoGitGithubNinjaBackup/settings/branches
+
 Section 6.4: perfil do usuário e configurações
+
+    https://github.com/settings/notifications
+
 Section 6.5: configurações do usuário - parte 2
+
+    SSH Private key
+
+        https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh
+
+
+    https://github.com/settings/tokens  
+
+
+    https://github.com/settings/organizations
+
 Section 6.6: onde conseguir ajuda
 
+    https://github.com/da2k/curso-git-e-github-ninja
+
 Section 7.1:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Section 7.2:
 Section 7.3:
 Section 7.4:
