@@ -655,26 +655,90 @@ Section 4.6: Custom Logs
 
 Section 5.1: GitHub
 
+    Before push an existent project to github, check again if we already have a repo:
+
+        git remote -v
+
+    At this moment, it returned me:
+
+        origin  /Applications/MAMP/htdocs/_devOps/_GIT/udemy/_fernando-daciuk.git (fetch)
+        origin  /Applications/MAMP/htdocs/_devOps/_GIT/udemy/_fernando-daciuk.git (push)
+
+    How to change the origin's URL:
     
+        git remote set-url <origin> <url>
 
+    In this case, I typed:
 
+        git remote set-url origin https://github.com/pamplonapaulo/cursoGitGithubNinjaBackup.git
 
+    Then, checking again the remote origin, I got:
 
+        origin  https://github.com/pamplonapaulo/cursoGitGithubNinjaBackup.git (fetch)
+        origin  https://github.com/pamplonapaulo/cursoGitGithubNinjaBackup.git (push)
 
+    In case the repo has a address with https, it will ask your password and username to PUSH it to the origin.
 
+    To send it to github, then now run:
 
-
-
-
-
-
-
+        git push origin master
 
 Section 5.2:
 Section 5.3:
 Section 5.4:
-Section 5.5:
-Section 5.6:
+
+    Closing issues from commitments
+    
+        Type the commit command with a normal text message, added by special words and also the hash of the issue:
+
+            - fix
+            git commit -m "any message - fix #2" (this will close the issue #2)
+
+            - resolve
+            git commit -m "any message - resolve #1"
+
+            Nothing will change untill your push. 
+
+Section 5.5: Branches inside GitHub
+
+    Sending another branch to the origin is just like sending the master branch.
+
+        As we already know, sending the master is:
+
+            git push origin master
+
+        And sending a branch named 'dev' would be like this:
+
+            git push origin dev
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Section 5.6: Removing branches
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Section 6.1:
 Section 6.2:
