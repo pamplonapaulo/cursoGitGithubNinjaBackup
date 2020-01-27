@@ -712,30 +712,45 @@ Section 5.5: Branches inside GitHub
             git push origin dev
 
 
+        If your named branch has updates to be sent to the master branch, then 'pull request' on your github is the way.
 
+        Pull Request - it's a merge request
 
+            once you handle this pull and merge from github, what to do on your local files?
 
+        On your local files, move yourself to the master branch and run a PULL command, which will bring from the github origin to your local master
 
-
-
-
-
-
-
+            git pull origin master
 
 
 
 Section 5.6: Removing branches
 
 
+    Deleting branches from your github
 
+            First: Why?
 
+            From GItHub, you can just click in the trash icon. The good thing is that you can undo this by the button 'restore'.
 
+        In the command line:
 
+        First, delete the branch:
 
+            git branch -D dev
 
+            (Deleted the dev's branch)
 
+        After that, you run:
 
+            git push origin <branch>  --delete
+            ex: git push origin dev --delete
+
+            Once you do this by the command line, there is no turning back from this point.
+
+            Same command could be ran like that:
+                git push origin :<branch>
+                ex: git push origin :dev
 
 
 
