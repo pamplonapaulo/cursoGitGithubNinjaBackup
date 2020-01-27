@@ -63,3 +63,19 @@ echo $var;
 - [ ] This is a checkbox 3
 - [ ] ~~This is a checkbox 3~~
 
+
+## References/Variables:
+
+[JS]: https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png
+
+![Javascript's Logo][JS]
+---
+![Javascript's Logo][JS]
+---
+![Javascript's Logo][JS]
+
+## Lines
+
+---
+---
+---
