@@ -755,12 +755,34 @@ Section 5.6: Removing branches
 
 
 
-Section 6.1:
-Section 6.2:
-Section 6.3:
-Section 6.4:
-Section 6.5:
-Section 6.6:
+Section 6.1: cache de senha
+
+    Global Config: getting yoru password on cache.
+
+        git config --global credential.helper cache
+
+    So next time you type your password, it will get cached.
+
+    How to undo that?
+
+        git config --global --unset credential.helper
+
+    How to show all your config?
+
+        git config --global --list
+
+    How to keep this data just for a while?
+
+        git config --global credential.helper 'cache --timeout=3600' (we have to use these quotes)
+
+    That way, your credentials will expire in 3600 seconds (one hour)
+
+
+Section 6.2: overview do repositório
+Section 6.3: configuração do repositório
+Section 6.4: perfil do usuário e configurações
+Section 6.5: configurações do usuário - parte 2
+Section 6.6: onde conseguir ajuda
 
 Section 7.1:
 Section 7.2:
