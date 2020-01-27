@@ -800,7 +800,172 @@ Section 6.6: onde conseguir ajuda
 
     https://github.com/da2k/curso-git-e-github-ninja
 
-Section 7.1:
+Section 7.1: Markdown
+
+    It's a language, another way to write HTML in a more legible way.
+
+    Markdown editor it's a need.
+
+    https://guides.github.com/features/mastering-markdown/
+
+    #Title example
+
+        It needs just a hash. It renders as H1 html.
+
+    ##Title example
+    
+        Two hashes, it renders as H2 html.
+
+    ###Title example
+    
+        Three hashes, it renders as H3 html.
+
+    ####Title example
+    
+        Four hashes, it renders as H4 html.
+
+    So on...
+
+    Another way could be:
+
+    Another Title in H1
+    ===================
+
+    Another Title in H2
+    -------------------
+
+Section 7.2: Some tags
+
+    Emphasis:
+
+        html:       <em>Emphasised Content</em>
+        markdown:   *Emphasised Content*
+        markdown:   _Emphasised Content_
+
+    Bold:
+
+        html:       <strong>Strong Content</strong>
+        markdown:   **Strong Content**
+        markdown:   Strong Content__
+
+    Links:
+
+        html:       <a href="https://google.com" title="Title">Link</a>
+        markdown:   [Link]("https://google.com" "Title")
+        markdown:   [Link]("https://google.com")
+        markdown:   <https://google.com>
+
+        markdown:   <mailto:fake@gmail.com>
+
+
+    You may want to use HTML tags while writting in Markdown. Some of them work - but not all.
+
+    In case you have to show underscore or '*', you need to scape it using the '\'.
+
+Section 7.3: Quotation, Lists, Images
+
+    Quotation
+
+    Super simple. Just start a line with '>':
+
+        > This is a quote.
+
+    
+    Lists
+
+        Dash and Dash space. All of the examples bellow work.
+
+        - Item 1
+        - Item 2
+        - Item 3
+          - Subitem 3.1
+          - Subitem 3.2
+    
+        1. Item 1
+        2. Item 2
+        3. Item 3
+
+        1. Item
+        1. Item
+        1. Item
+
+        1. Item
+        - Item
+        - Item
+
+    Images
+
+        ![]()
+
+            ![Image's Alt](https://upload.wikimedia.org/wikipedia/commons/0/0a/He-Man_and_the_Masters_of_the_Universe.jpg)
+
+Section 7.4: Tables, Monospace Text
+
+    ## Tables
+    Products | Prices
+    ----------:|:-------
+    Rice | 3 USD
+    Beans | 1 USD
+    Potato | 10 USD
+    Flower | 9 USD
+
+    ## Tables
+    Products | Prices
+    :----------:|:-------: (here we get center align)
+    Rice | 3 USD
+    Beans | 1 USD
+    Potato | 10 USD
+    Flower | 9 USD
+
+
+    Monospace Text (code style)
+
+        ## Monospace
+        The tag `<p>` is used to create paragraphs
+
+        ## Here a block of colored JS code:
+
+        ```js <== this is what sets the color
+        function(){
+        console.log('hello);
+        }
+        ```
+
+        ## a block of colored PHP code:
+        ```php <==this is what sets the color
+        <?php
+        $var = 'any string';
+        echo $var;
+        ?>
+        ```
+
+Section 7.5: Task Lists, References, Lines
+
+    - [ ] This is a checkbox 1
+    - [x] This is a checkbox 2
+    - [ ] This is a checkbox 3
+    - [ ] ~~This is a checkbox 3~~
+
+
+    ## References/Variables:
+
+    [JS]: https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png
+
+    ![Javascript's Logo][JS]
+    ---
+    ![Javascript's Logo][JS]
+    ---
+    ![Javascript's Logo][JS]
+
+    ## Lines
+
+    ---
+    ---
+    ---
+
+Section 7.6: Attachments, README.md
+
+    
 
 
 
@@ -814,12 +979,6 @@ Section 7.1:
 
 
 
-
-Section 7.2:
-Section 7.3:
-Section 7.4:
-Section 7.5:
-Section 7.6:
 
 Section 8.1:
 Section 8.2:
