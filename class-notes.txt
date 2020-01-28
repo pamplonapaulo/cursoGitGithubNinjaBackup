@@ -24,7 +24,7 @@ Section 1.2:
     git add <file name> (then the file goes to the 'staging area')
 
     git config --global user.name "Paulo Pamplona"
-    git config --global user.email "pamplonapaulo@gmail.com"
+    git config --global user.email "myemail.com"
     git config -l (it lists your config)
     git config --list (same)
 
@@ -855,7 +855,7 @@ Section 7.2: Some tags
         markdown:   [Link]("https://google.com")
         markdown:   <https://google.com>
 
-        markdown:   <mailto:fake@gmail.com>
+        markdown:   <mailto:fakegmail.com>
 
 
     You may want to use HTML tags while writting in Markdown. Some of them work - but not all.
@@ -1125,49 +1125,50 @@ Section 8.4:
 
     In case he sees not only his changes but someone else too, probably he is using a wrong branch: make sure he will update 'dev's branch, not the 'master'.
 
+    Ok. Now both workers have to make sure they are up to date.
     
+    FERNANDO
+
+        (dev): git fetch origin
+
+    ANA
+
+        (dev): git fetch upstream
+
+    FERNANDO
+
+        (dev): git merge origin/dev (this is updating his branch 'dev')
+
+    ANA
+
+        (dev): git merge upstream/dev (this is updating her branch 'dev')
+
+    Now both are up to date.
 
 
 
+    So now ANA have to update something on the JS.
 
-        
+        (dev): git checkout -b js-improvments
 
+                                                                    * * * ADVICE: Never repeat a branch's name.
+    Then she does what she needs under the JS files...
+    ...and she commits it.
 
+    Ok, now she wants to send it to github:
 
+        (js-improvments): git push origin js-improvments
 
-
-
-
-
-
-
-
-
+    On the website, she clicks on the 'compare & pull request'.
 
 
 Section 8.5:
 
+Section 8.6: Continuous Integration
 
+https://travis-ci.org/
 
-
-
-
-
-
-
-
-
-
-
-
-Section 8.6:
-
-
-
-
-
-
-
+https://circleci.com/
 
 
 
